@@ -30,20 +30,20 @@ bool Date::isBusinessDay() const {
 //Compute Day Of week
 int Date::dayOfWeek(const QuantLib::Date &d) {
     // Zeller's Congruence algorithm
-    int y = d.getYear();
-    int m = d.getMonth();
+    int year = d.getYear();
+    int month = d.getMonth();
     int day = d.getDay();
 
-    if (m < 3) {
-        m += 12;
-        y--;
+    if (month < 3) {
+        month += 12;
+        year--;
     }
 
-    int k = y % 100; // the year within the century
-    int j = y / 100; // the zero-based century (actually floor(y/100))
+    int yearCentury= year % 100; // the year within the century
+    int zeroBasedCentury = year / 100; // the zero-based century (actually floor(y/100))
 
     // Zeller's formula
-    int f = day + (13 * (m + 1)) / 5 + k + k / 4 + j / 4 - 2 * j;
+    int f = day + (13 * (month + 1)) / 5 + yearCentury + yearCentury / 4 + zeroBasedCentury / 4 - 2 * zeroBasedCentury;
     return (f % 7 + 7) % 7; // Return value is in the range [0,6] where 0=Saturday, ..., 6=Friday
 }
 
