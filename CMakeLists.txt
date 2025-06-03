@@ -1,14 +1,25 @@
+# Top-level CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.10)
+project(QuantLibrary)
 
-project(QuantLibCpp VERSION 1.0.0 LANGUAGES CXX)
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON) 
-include_directories(include)
-#  QuantLib library
-add_executable(test_date src/test_date.cpp src/date.cpp)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# TO DO: Add QuantLib library as a dependency
-# Find the QuantLib package
-# Note: No library yet — will add later with add_library()
-# Link the QuantLib library to  test executable  
+# Include directories
+include_directories(include)
+
+# Main library (optional if you want to make it modular)
+# add_library(quantlib src/date.cpp)
+
+# If you just want to build test executable:
+
+# TEST TARGET
+add_executable(test_tests
+    src/date.cpp
+    tests/test_date.cpp
+)
+
+# Add include path for test target
+target_include_directories(test_tests PRIVATE include)

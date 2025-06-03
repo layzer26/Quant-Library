@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_date
+# Target rules for targets named test_tests
 
 # Build rule for target.
-test_date: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_date
-.PHONY : test_date
+test_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_tests
+.PHONY : test_tests
 
 # fast build rule for target.
-test_date/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/build
-.PHONY : test_date/fast
+test_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/build
+.PHONY : test_tests/fast
 
 src/date.obj: src/date.cpp.obj
 .PHONY : src/date.obj
 
 # target to build an object file
 src/date.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.obj
 .PHONY : src/date.cpp.obj
 
 src/date.i: src/date.cpp.i
@@ -141,7 +141,7 @@ src/date.i: src/date.cpp.i
 
 # target to preprocess a source file
 src/date.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.i
 .PHONY : src/date.cpp.i
 
 src/date.s: src/date.cpp.s
@@ -149,32 +149,32 @@ src/date.s: src/date.cpp.s
 
 # target to generate assembly for a file
 src/date.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.s
 .PHONY : src/date.cpp.s
 
-src/test_date.obj: src/test_date.cpp.obj
-.PHONY : src/test_date.obj
+tests/test_date.obj: tests/test_date.cpp.obj
+.PHONY : tests/test_date.obj
 
 # target to build an object file
-src/test_date.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/test_date.cpp.obj
-.PHONY : src/test_date.cpp.obj
+tests/test_date.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.obj
+.PHONY : tests/test_date.cpp.obj
 
-src/test_date.i: src/test_date.cpp.i
-.PHONY : src/test_date.i
+tests/test_date.i: tests/test_date.cpp.i
+.PHONY : tests/test_date.i
 
 # target to preprocess a source file
-src/test_date.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/test_date.cpp.i
-.PHONY : src/test_date.cpp.i
+tests/test_date.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.i
+.PHONY : tests/test_date.cpp.i
 
-src/test_date.s: src/test_date.cpp.s
-.PHONY : src/test_date.s
+tests/test_date.s: tests/test_date.cpp.s
+.PHONY : tests/test_date.s
 
 # target to generate assembly for a file
-src/test_date.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/test_date.cpp.s
-.PHONY : src/test_date.cpp.s
+tests/test_date.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.s
+.PHONY : tests/test_date.cpp.s
 
 # Help Target
 help:
@@ -184,13 +184,13 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... test_date
+	@echo ... test_tests
 	@echo ... src/date.obj
 	@echo ... src/date.i
 	@echo ... src/date.s
-	@echo ... src/test_date.obj
-	@echo ... src/test_date.i
-	@echo ... src/test_date.s
+	@echo ... tests/test_date.obj
+	@echo ... tests/test_date.i
+	@echo ... tests/test_date.s
 .PHONY : help
 
 
