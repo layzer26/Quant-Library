@@ -116,24 +116,61 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_tests
+# Target rules for targets named test_date
 
 # Build rule for target.
-test_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_tests
-.PHONY : test_tests
+test_date: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_date
+.PHONY : test_date
 
 # fast build rule for target.
-test_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/build
-.PHONY : test_tests/fast
+test_date/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/build
+.PHONY : test_date/fast
+
+#=============================================================================
+# Target rules for targets named test_interest_rate
+
+# Build rule for target.
+test_interest_rate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_interest_rate
+.PHONY : test_interest_rate
+
+# fast build rule for target.
+test_interest_rate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/build
+.PHONY : test_interest_rate/fast
+
+src/InterestRate.obj: src/InterestRate.cpp.obj
+.PHONY : src/InterestRate.obj
+
+# target to build an object file
+src/InterestRate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/src/InterestRate.cpp.obj
+.PHONY : src/InterestRate.cpp.obj
+
+src/InterestRate.i: src/InterestRate.cpp.i
+.PHONY : src/InterestRate.i
+
+# target to preprocess a source file
+src/InterestRate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/src/InterestRate.cpp.i
+.PHONY : src/InterestRate.cpp.i
+
+src/InterestRate.s: src/InterestRate.cpp.s
+.PHONY : src/InterestRate.s
+
+# target to generate assembly for a file
+src/InterestRate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/src/InterestRate.cpp.s
+.PHONY : src/InterestRate.cpp.s
 
 src/date.obj: src/date.cpp.obj
 .PHONY : src/date.obj
 
 # target to build an object file
 src/date.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.obj
 .PHONY : src/date.cpp.obj
 
 src/date.i: src/date.cpp.i
@@ -141,7 +178,7 @@ src/date.i: src/date.cpp.i
 
 # target to preprocess a source file
 src/date.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.i
 .PHONY : src/date.cpp.i
 
 src/date.s: src/date.cpp.s
@@ -149,7 +186,7 @@ src/date.s: src/date.cpp.s
 
 # target to generate assembly for a file
 src/date.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/src/date.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/src/date.cpp.s
 .PHONY : src/date.cpp.s
 
 tests/test_date.obj: tests/test_date.cpp.obj
@@ -157,7 +194,7 @@ tests/test_date.obj: tests/test_date.cpp.obj
 
 # target to build an object file
 tests/test_date.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/tests/test_date.cpp.obj
 .PHONY : tests/test_date.cpp.obj
 
 tests/test_date.i: tests/test_date.cpp.i
@@ -165,7 +202,7 @@ tests/test_date.i: tests/test_date.cpp.i
 
 # target to preprocess a source file
 tests/test_date.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/tests/test_date.cpp.i
 .PHONY : tests/test_date.cpp.i
 
 tests/test_date.s: tests/test_date.cpp.s
@@ -173,8 +210,32 @@ tests/test_date.s: tests/test_date.cpp.s
 
 # target to generate assembly for a file
 tests/test_date.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_tests.dir\build.make CMakeFiles/test_tests.dir/tests/test_date.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_date.dir\build.make CMakeFiles/test_date.dir/tests/test_date.cpp.s
 .PHONY : tests/test_date.cpp.s
+
+tests/test_interest_rate.obj: tests/test_interest_rate.cpp.obj
+.PHONY : tests/test_interest_rate.obj
+
+# target to build an object file
+tests/test_interest_rate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/tests/test_interest_rate.cpp.obj
+.PHONY : tests/test_interest_rate.cpp.obj
+
+tests/test_interest_rate.i: tests/test_interest_rate.cpp.i
+.PHONY : tests/test_interest_rate.i
+
+# target to preprocess a source file
+tests/test_interest_rate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/tests/test_interest_rate.cpp.i
+.PHONY : tests/test_interest_rate.cpp.i
+
+tests/test_interest_rate.s: tests/test_interest_rate.cpp.s
+.PHONY : tests/test_interest_rate.s
+
+# target to generate assembly for a file
+tests/test_interest_rate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_interest_rate.dir\build.make CMakeFiles/test_interest_rate.dir/tests/test_interest_rate.cpp.s
+.PHONY : tests/test_interest_rate.cpp.s
 
 # Help Target
 help:
@@ -184,13 +245,20 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... test_tests
+	@echo ... test_date
+	@echo ... test_interest_rate
+	@echo ... src/InterestRate.obj
+	@echo ... src/InterestRate.i
+	@echo ... src/InterestRate.s
 	@echo ... src/date.obj
 	@echo ... src/date.i
 	@echo ... src/date.s
 	@echo ... tests/test_date.obj
 	@echo ... tests/test_date.i
 	@echo ... tests/test_date.s
+	@echo ... tests/test_interest_rate.obj
+	@echo ... tests/test_interest_rate.i
+	@echo ... tests/test_interest_rate.s
 .PHONY : help
 
 

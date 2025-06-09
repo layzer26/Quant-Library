@@ -15,11 +15,21 @@ include_directories(include)
 
 # If you just want to build test executable:
 
-# TEST TARGET
-add_executable(test_tests
+# TEST TARGETS
+## Date Test Target
+add_executable(test_date
     src/date.cpp
     tests/test_date.cpp
+    
+)
+target_include_directories(test_date PRIVATE include)
+
+##Interest Rate Test Target
+add_executable(test_interest_rate
+    src/InterestRate.cpp
+    tests/test_interest_rate.cpp
 )
 
+
 # Add include path for test target
-target_include_directories(test_tests PRIVATE include)
+target_include_directories(test_interest_rate PRIVATE include)

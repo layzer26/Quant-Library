@@ -1,13 +1,20 @@
 # Quant-Library
 
 A modern C++ quantitative finance library inspired by QuantLib.  
-This project provides reusable components for date handling, financial calculations, and quantitative models, with a focus on clean architecture and testability.
+This project provides reusable components for date handling, interest rate modeling, financial calculations, and quantitative models — with a focus on clean architecture, extensibility, and testability.
 
 ## Features
 
-- Date utilities (business days, calendars, conventions)
-- Financial models (coming soon)
-- Modular architecture
+- Date utilities
+  - Business day calculation
+  - Basic calendar support
+  - Date formatting and conventions
+- Interest rate models
+  - Simple and compound interest
+  - Support for variable compounding frequencies
+  - Variance-adjusted rates
+  - Simulate monthly contributions
+- Modular architecture (easy to extend)
 - Built with CMake
 - Unit tests included
 
@@ -15,11 +22,19 @@ This project provides reusable components for date handling, financial calculati
 
 Quant-Library/
 ├── CMakeLists.txt
+│
+├── include\quantlib
+│ └── Date.h
+│ └──InterestRate.h
+│
 ├── src/ # Core source code
-│ └── Date.cpp/hpp # Example module
+│ └── Date.cpp 
+│ └── InterestRate.cpp
+│
 ├── tests/ # Unit tests
 │ └── test_date.cpp
-└── build/ # (generated) build files
+│ └── test_interest_rate.cpp
+
 
 ## Build Instructions
 
@@ -37,6 +52,32 @@ cd build
 cmake ..
 cmake --build .
 ---
+
+## Implemented Classes
+
+### QuantLib::Date
+
+Models calendar dates
+
+Business day checks
+
+Display and format utilities
+
+### QuantLib::InterestRate
+
+Models interest rates
+
+Supports:
+
+Simple interest
+
+Compound interest
+
+Compound interest with variance
+
+Compound interest with monthly contributions
+
+Multiple compounding frequencies (Annual, SemiAnnual, Quarterly, Monthly, Daily)
 
 ## Roadmap
 
