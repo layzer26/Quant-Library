@@ -1,27 +1,35 @@
-# CMake build folder
+# Build folders
 /build/
 /CMakeFiles/
 /CMakeCache.txt
 cmake_install.cmake
 Makefile
 
-# VSCode settings 
-/.vscode/
-
-# Windows specific
+# Executables and object files
 *.exe
 *.obj
 *.dll
 *.pdb
+*.out
+*.a
+*.lib
+*.so
+*.dylib
 
-# macOS specific
+# Editor settings
+/.vscode/
+
+# macOS
 .DS_Store
 
-# Linux specific
+# Linux
 *.swp
 *.swo
 
-# Temporary files
+# Logs and temporary files
 *.log
 *.tmp
 *.cache
+
+# Test executables
+/test_*.exe
