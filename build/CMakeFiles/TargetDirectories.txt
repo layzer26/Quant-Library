@@ -1,4 +1,4 @@
-C:/users/layze/documents/Github/Quant-Library/build/CMakeFiles/quantlib.dir
-C:/users/layze/documents/Github/Quant-Library/build/CMakeFiles/test_all.dir
-C:/users/layze/documents/Github/Quant-Library/build/CMakeFiles/edit_cache.dir
-C:/users/layze/documents/Github/Quant-Library/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Layze/Documents/GitHub/Quant-Library/build/CMakeFiles/quantlib.dir
+C:/Users/Layze/Documents/GitHub/Quant-Library/build/CMakeFiles/test_all.dir
+C:/Users/Layze/Documents/GitHub/Quant-Library/build/CMakeFiles/edit_cache.dir
+C:/Users/Layze/Documents/GitHub/Quant-Library/build/CMakeFiles/rebuild_cache.dir

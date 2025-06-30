@@ -19,6 +19,8 @@ include_directories(include)
 add_library(quantlib
     src/Date.cpp
     src/InterestRate.cpp
+    src/YieldCurve.cpp
+    src/DayCountConvention.cpp
 )
 
 add_executable(test_all
@@ -27,6 +29,7 @@ add_executable(test_all
     tests/test_interest_rate.cpp
     tests/test_getDaysBetween.cpp
     tests/test_isAfter.cpp
+    tests/test_YieldCurve.cpp
 )
 
 target_link_libraries(test_all quantlib)
