@@ -3,7 +3,8 @@
 
 using namespace QuantLib;
 
-int main()
+void test_interest_rate ()
+
 {
     InterestRate rate(0.05, CompoundingFrequency::Annual, 0); // 5% annual interest rate, compounded annually
     double principal = 1000.0;                                // Principal amount
@@ -23,5 +24,5 @@ int main()
     {
         std::cerr << "Error: " << e.what() << std::endl;
     }
-    return 0;
-}
+   
+}//run_interest_rate_test

@@ -16,20 +16,18 @@ include_directories(include)
 # If you just want to build test executable:
 
 # TEST TARGETS
-## Date Test Target
-add_executable(test_date
-    src/date.cpp
-    tests/test_date.cpp
-    
-)
-target_include_directories(test_date PRIVATE include)
-
-##Interest Rate Test Target
-add_executable(test_interest_rate
+add_library(quantlib
+    src/Date.cpp
     src/InterestRate.cpp
-    tests/test_interest_rate.cpp
 )
 
+add_executable(test_all
+    tests/test_all.cpp
+    tests/test_date.cpp
+    tests/test_interest_rate.cpp
+    tests/test_getDaysBetween.cpp
+    tests/test_isAfter.cpp
+)
 
-# Add include path for test target
-target_include_directories(test_interest_rate PRIVATE include)
+target_link_libraries(test_all quantlib)
+target_include_directories(test_all PRIVATE include)

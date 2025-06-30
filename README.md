@@ -61,6 +61,10 @@ Models calendar dates
 
 Business day checks
 
+Date comparison via isAfter()
+
+Day difference via getDaysBetween()
+
 Display and format utilities
 
 ### QuantLib::InterestRate

@@ -20,7 +20,11 @@ class Date {
 
         // Display function
         void display() const;
+
+        int getDaysBetween(const Date &other) const;
+        bool isAfter(const Date& other ) const;
             
+                
 
     private:
         int m_day;

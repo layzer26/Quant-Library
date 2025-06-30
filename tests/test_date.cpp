@@ -2,7 +2,8 @@
 #include "../include/quantlib/date.h"
 
 using namespace QuantLib;
-int main (){
+
+void test_date(){
     Date date(15, 3, 2023);
     date.display();
 
@@ -12,5 +13,5 @@ int main (){
         std::cout << "The date is not a business day." << std::endl;
     }
 
-    return 0;
- }//main
+    
+ }//run_date_test
