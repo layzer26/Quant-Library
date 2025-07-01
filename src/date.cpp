@@ -15,7 +15,13 @@ int Date::getMonth() const {
 int Date::getYear() const {
     return m_year;
 }
-
+/*int Date::getToday() const {
+    
+    time_t t = time(nullptr);
+    tm* now = localtime(&t);
+    return now->tm_mday;
+}
+*/
 //Display function
 void Date::display() const {
     std::cout << "Date: " << m_day << "/" << m_month << "/" << m_year << std::endl;

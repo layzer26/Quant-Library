@@ -8,6 +8,7 @@ extern void test_interest_rate();
 extern void test_getDaysBetween();
 extern void test_isAfter();
 extern void test_YieldCurve();
+extern void test_CashFlow();
 
 int main (){
      
@@ -28,6 +29,9 @@ int main (){
 
     std::cout <<"Yield Curve test..." << std::endl;
     test_YieldCurve();
+
+    std::cout << "Cashflow test..." << std::endl;
+    test_CashFlow();
 
     return 0;   
 }

@@ -12,8 +12,9 @@ class Date {
         // Getters
         int getDay() const ;
         int getMonth() const ;
-        int getYear() const ;
-
+        int getYear() const ;   
+        //int getToday()const;
+        
         bool isBusinessDay()const;
 
         int static dayOfWeek( const QuantLib::Date &d);
