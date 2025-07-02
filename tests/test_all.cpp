@@ -9,6 +9,7 @@ extern void test_getDaysBetween();
 extern void test_isAfter();
 extern void test_YieldCurve();
 extern void test_CashFlow();
+extern void test_cashflowschedule();
 
 int main (){
      
@@ -32,6 +33,9 @@ int main (){
 
     std::cout << "Cashflow test..." << std::endl;
     test_CashFlow();
+
+    std::cout <<"Cashflow Schedule test..." << std::endl;
+    test_cashflowschedule();
 
     return 0;   
 }

@@ -13,6 +13,8 @@ class Date {
         int getDay() const ;
         int getMonth() const ;
         int getYear() const ;   
+
+        void setMonth(int month );
         //int getToday()const;
         
         bool isBusinessDay()const;

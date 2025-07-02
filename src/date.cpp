@@ -82,3 +82,16 @@ bool Date::isAfter(const Date& other) const {
     return m_day > other.getDay(); // Compare days if year and month are the same
 }
 
+void Date::setMonth(int month) {
+    m_month = month;
+    
+    if (m_month > 12) {
+        m_month = 1; // Reset to January if month exceeds 12
+        m_year += 1; // Increment year
+    }
+    else if (m_month < 1) {
+        m_month = 12; // Reset to December if month is less than 1
+        m_year -= 1; // Decrement year
+    }
+}
+
